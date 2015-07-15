@@ -1,0 +1,42 @@
+div {
+	border: 1px solid white;
+}
+
+body{
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 1000px;
+	background-color: gray;
+
+}
+
+.body_container{
+	height: auto;
+	width: 1000px;
+	margin: 25px auto;
+	
+}
+.header_container{
+	height: 100px;
+	width: 1000px;
+}
+
+.content_container{
+	height: 800px;
+	width: 1000px;
+	margin-top: 25px;
+}
+
+.content{
+	display: block;
+}
+
+.bottom_nav{
+	height: 100px;
+	width: 900px;
+}
+
+.game_area{
+	height: 500px;
+	width: 900px;
+}
