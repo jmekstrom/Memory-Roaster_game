@@ -1,5 +1,5 @@
 div {
-	border: 1px solid white;
+	border: 3px solid white;
 }
 
 body{
@@ -7,36 +7,52 @@ body{
 	background-position: 50%;
 	background-size: 1000px;
 	background-color: gray;
+	color: white;
 
 }
 
 .body_container{
 	height: auto;
-	width: 1000px;
-	margin: 25px auto;
+	width: 1400px;
+	margin: 0 auto;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
 	
 }
-.header_container{
-	height: 100px;
-	width: 1000px;
+.content{
+	display: inline-block;
+	height: 1000px;
+}
+
+.menu_container{
+	width: 194px;
+	margin: 0;
+	padding: 0;
+	border-top-left-radius: 100px;
 }
 
 .content_container{
-	height: 800px;
-	width: 1000px;
-	margin-top: 25px;
+	width: 985px;
+	margin: 0;
+	padding: 0;
 }
 
-.content{
-	display: block;
-}
-
-.bottom_nav{
-	height: 100px;
-	width: 900px;
+.stats{
+	width: 194px;
+	margin: 0;
+	padding: 0;
+	border-top-right-radius: 100px;
 }
 
 .game_area{
-	height: 500px;
-	width: 900px;
+	width: 800px;
+	height: 800px;
+}
+
+h1{
+	text-align: center;
+}
+
+h1.title{
+	font-size: 100px;
 }
