@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>memory match prototype</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.card-face{
+    		left: 0px;
+    		top: 0px;
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+		}
+		.card_container{
+    		position: relative;
+    		height: 150px;
+    		width: 100px;
+    		display: inline-block;
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="card_container">
+    	<img class="front-face card-face" src="http://assets.nydailynews.com/polopoly_fs/1.1245686!/img/httpImage/image.jpg_gen/derivatives/article_970/afp-cute-puppy.jpg" id="card_front1">
+    	<img class="back-face card-face" src="http://cdn.shopify.com/s/files/1/0200/7616/products/blue-back_4_1024x1024.png?v=1375486520" onclick="card_click('#card_back1','#card_front1')" id="card_back1">
+	</div>
+	<div class="card_container">
+    	<img class="front-face card-face" src="https://s-media-cache-ak0.pinimg.com/236x/98/55/17/985517aa4282bd36e8b84f37602a55ef.jpg" id="card_front2">
+    	<img class="back-face card-face" src="http://cdn.shopify.com/s/files/1/0200/7616/products/blue-back_4_1024x1024.png?v=1375486520" onclick="card_click('#card_back2','#card_front2')" id="card_back2">
+	</div>
+		<div class="card_container">
+    	<img class="front-face card-face" src="https://s-media-cache-ak0.pinimg.com/236x/98/55/17/985517aa4282bd36e8b84f37602a55ef.jpg" id="card_front3">
+    	<img class="back-face card-face" src="http://cdn.shopify.com/s/files/1/0200/7616/products/blue-back_4_1024x1024.png?v=1375486520" onclick="card_click('#card_back3','#card_front3')" id="card_back3">
+	</div>
+
+<script>
+	var second_clicked_card = false;
+	var first_clicked_card_src=null;
+	var card_match = false;
+
+	function card_click(card_back_id,card_front_id){
+
+    	var card_front_src = $(card_front_id).attr('src');
+
+    	if(!second_clicked_card){
+        	console.log('it is the first clicked card');
+        	first_clicked_card_src = card_front_src;
+        	second_clicked_card = true;
+    	}
+
+    	else{
+
+        	if(card_front_src == first_clicked_card_src){
+            	console.log("Same Card!!!");
+            	card_match = true;
+        	}
+        	else{
+        		console.log("no match")
+        		card_match = false;
+
+        	}
+    	}
+    
+    $(card_back_id).hide();
+    
+	}
+
+</script>
+</body>
+</html>

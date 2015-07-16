@@ -56,3 +56,9 @@ h1{
 h1.title{
 	font-size: 100px;
 }
+
+.card_container{
+	height: 150px;
+	width: 100px;
+	display: inline-block;
+}
