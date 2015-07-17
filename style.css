@@ -1,10 +1,7 @@
-div {
-	border: 3px solid white;
-}
 
 body{
 	background-repeat: no-repeat;
-	background-position: 50%;
+	background-position: 50% 0px;
 	background-size: 1000px;
 	background-color: gray;
 	color: white;
@@ -51,7 +48,8 @@ body{
 	width: 980px;
 	height: 500px;
 	text-align: center;
-	margin-left: 0px;
+	margin-top: 250px;
+	margin-left: 15px;
 
 }
 
@@ -70,22 +68,20 @@ h1.title{
 }
 
 .card-face{
-    		left: 0px;
-    		top: 0px;
-    		position: absolute;
-    		height: 100%;
-    		width: 100%;
-		}
-		.card_container{
-    		position: relative;
-    		height: 175px;
-    		width: 150px;
-    		display: inline-block;
-		}
-
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 .card_container{
-	border: 3px solid gray;
+    position: relative;
+    height: 175px;
+    width: 150px;
+    display: inline-block;
+    border: 5px solid gray;
 	border-radius: 10px;
 	background-color: white;
 }
+
 

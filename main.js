@@ -1,7 +1,4 @@
-    var click = 0;
-	var second_clicked_card = false;
 	var first_clicked_card_src=null;
-	var card_match = false;
 	var first_clicked_card_id = null;
 	var second_clicked_card_id = null;
     var back_face_img_src = "http://solarroast.com/sites/default/files/Burlap.png";
@@ -16,17 +13,19 @@
     var front_face_img_src_9  = "images/match9.png";
     var front_face_img_src_num;
     var random_img_array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9];
+    var click_num = 0;
+    var cards_matched = 0;
 
    
    $(document).ready(function(){
         $('.back-face').attr('src',back_face_img_src); //using jquery to set the source of the image for the back of the card
+
+        //Thiis loop finds and assigns pics to positions randomly
         for(i = 1; i <= 18; i++){
             console.log("=====================loop start========================")
             front_face_img_id = ("#card_front"+i);
             console.log("front_face_image_id is:",front_face_img_id);
             
-            //grab random img and assign to front_face_img_src_num variable
-            //insert code here
             console.log("array before deletion is:",random_img_array)
 
             var rn = random_img_array.length - 1;
@@ -52,37 +51,49 @@
             console.log("=====================loop end==========================");
             //
         }
-   })
+    })
     
     
 	function card_click(card_back_id,card_front_id){
         
         var card_front_src = $(card_front_id).attr('src');
         
+        if(click_num <= 1){
+            click_num = click_num + 1;
+            console.log(click_num +" cards have been clicked.");
+        }
+        else{
+            console.log(click_num +" cards have been clicked.  Card flipping temporarily disabled");
+
+           return;
+        }
+
+
         $(card_back_id).hide();
 
 
-    	if(!second_clicked_card){
-        	console.log('it is the first clicked card');
+    	if(click_num == 1){
+        	console.log('First card has been clicked');
         	first_clicked_card_src = card_front_src;
-        	second_clicked_card = true;
         	first_clicked_card_id = card_back_id;
-        	click = 1;
+        	
     	}
 
     	else{
-            can_flip = false;
-    		click = 2;
+            console.log('Second card has been clicked')
     		second_clicked_card_id = card_back_id;
         	if(card_front_src == first_clicked_card_src){
-            	console.log("Same Card!!!");
-            	card_match = true;
-            	
+            	console.log("Card Match!!!");
+                click_num = 0;
+                console.log("Card flipping re-enabled")
+                cards_matched = cards_matched + 1;
+                if(cards_matched >= 9){
+                        game_won();     
+            	}
 
         	}
         	else{
         		console.log("no match")
-        		card_match = false;
         		flip_cards();
         		
         	}
@@ -93,8 +104,16 @@
 	}
 
 	function flip_cards(){
-		setTimeout(function(){$(first_clicked_card_id).show();$(second_clicked_card_id).show();},2000)
-		second_clicked_card = false;
-        can_flip = true;
+		setTimeout(function(){$(first_clicked_card_id).show();$(second_clicked_card_id).show();click_num=0;console.log("Card flipping re-enabled");},2000)
+
+        
 		
 	}
+
+    function game_won(){
+        setTimeout(function(){$('.back-face').show();console.log('Game Won!!!!')},3000);
+        click_num = 0;
+        cards_matched = 0;
+        //need to setup and call function to re-setup the board or images
+    }
+
