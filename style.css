@@ -29,12 +29,14 @@ body{
 	margin: 0;
 	padding: 0;
 	border-top-left-radius: 100px;
+	vertical-align: top;
 }
 
 .content_container{
 	width: 985px;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 .stats{
@@ -42,11 +44,15 @@ body{
 	margin: 0;
 	padding: 0;
 	border-top-right-radius: 100px;
+	vertical-align: top;
 }
 
 .game_area{
-	width: 800px;
-	height: 800px;
+	width: 980px;
+	height: 500px;
+	text-align: center;
+	margin-left: 0px;
+
 }
 
 h1{
@@ -58,7 +64,28 @@ h1.title{
 }
 
 .card_container{
-	height: 150px;
-	width: 100px;
+	height: 175px;
+	width: 150px;
 	display: inline-block;
 }
+
+.card-face{
+    		left: 0px;
+    		top: 0px;
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+		}
+		.card_container{
+    		position: relative;
+    		height: 175px;
+    		width: 150px;
+    		display: inline-block;
+		}
+
+.card_container{
+	border: 3px solid gray;
+	border-radius: 10px;
+	background-color: white;
+}
+
