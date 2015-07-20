@@ -3,14 +3,17 @@ body{
 	background-repeat: no-repeat;
 	background-position: 50% 0px;
 	background-size: 1000px;
-	background-color: gray;
+	background-color: #000000;
 	color: white;
+	font-family: "coffee_font";
+
 
 }
 
+
 .body_container{
 	height: auto;
-	width: 1400px;
+	width: 1620px;
 	margin: 0 auto;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
@@ -22,35 +25,41 @@ body{
 }
 
 .menu_container{
-	width: 194px;
 	margin: 0;
 	padding: 0;
-	border-top-left-radius: 100px;
+	border-top-left-radius: 75px;
 	vertical-align: top;
 }
 
+.side_containers{
+	width: 200px;
+	height: 1300px;
+	border: 3px dotted white;
+	background-color: gray;
+}
+
 .content_container{
-	width: 985px;
+	width: 1200px;
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	vertical-align: top;
 }
 
 .stats{
-	width: 194px;
 	margin: 0;
 	padding: 0;
-	border-top-right-radius: 100px;
+	border-top-right-radius: 75px;
 	vertical-align: top;
 }
 
 .game_area{
-	width: 980px;
+	width: 100%;
 	height: 500px;
 	text-align: center;
-	margin-top: 250px;
-	margin-left: 15px;
-
+	margin-top: 0px;
+	margin-left: 0px;
+	display: none;
 }
 
 h1{
@@ -59,6 +68,7 @@ h1{
 
 h1.title{
 	font-size: 100px;
+	margin-top: 0px;
 }
 
 .card_container{
@@ -82,6 +92,95 @@ h1.title{
     border: 5px solid gray;
 	border-radius: 10px;
 	background-color: white;
+	margin: 10px;
 }
 
+.back-face{
+	width: 200px;
+	height: 220px;
+	margin-top: -20px;
+	margin-left: -20px;
+}
+
+
+
+.lcd_display{
+	border: 10px solid #020800;
+	background-color: #7AF950;
+	height: 250px;
+	width: 80%;
+	margin-left: 5px;
+	color: #020800;
+	padding-left: 10px;
+	padding-top: 20px;
+	font-family: "digital-7";
+	border-top-right-radius: 75px;
+}
+
+@font-face {
+    font-family: 'digital-7'; /*a name to be used later*/
+    src: url('fonts/digital-7.ttf'); /*URL to font*/
+    font-family: 'coffee_font'; /*a name to be used later*/
+    src: url('fonts/KGSkinnyLatte.ttf'); /*URL to font*/
+}
+
+button{
+	width: 90%;
+	height: 80px;
+	margin: 15px 0 0 5%;
+	font-size: 24px;
+	border: 5px solid silver;
+	text-align: center;
+	border-top-left-radius: 50px;
+}
+
+.start_button{
+	background-color: #009933;
+}
+
+.start_button:active{
+	background-color: #00FF00;
+}
+
+.reset_button{
+	background-color: #800000;
+}
+
+.reset_button:active{
+	background-color: #FF0000;
+}
+
+.left_buttons:focus {
+  outline: none;
+}
+
+p.stats{
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+p.score{
+	font-size: 28px;
+}
+
+p.score_content{
+	font-size: 36px;
+}
+
+.game_won{
+	position: relative;
+	top: 100px;
+	left: 0px;
+	font-size: 50px;
+	color: #00FF00;
+	display: none;
+}
+
+.stats_content{
+	color: blue;
+	font-size: 20px;
+	margin: 0;
+	margin-bottom: 10px;
+
+}
 
