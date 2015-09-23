@@ -1,135 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Memory Roaster</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="shortcut icon" href="images/coffee_icon.png"/>
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js">
-	<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.13/dist/jquery.flip.min.js">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="main.js"></script>
-	
+    <meta charset="utf-8">
+    <title>Memory Roaster</title>
+    <link rel="shortcut icon" href="images/coffee_icon.png"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
 </head>
 <body background="images/roaster.jpg">
-<div class="body_container">
 
-	<!--This is my header container division.  Will have the game logo, game title, reset button, and menu-->
-	<div class="menu_container content side_containers">
-		<h1>MENU</h1>
-		<button class = "start_button left_buttons" onclick="show_game_area()">START</button> 
-		<button class = "reset_button left_buttons" onclick="reset_game()">RESET</button> 
-	</div>
+<div class="body_container container-fluid">
+    <div class="row">
+        <div class="col-xs-2">
+            <h1 class="text-center side_title">MENU</h1>
+        </div>
+        <div class="col-xs-8">
+            <h1 class="title text-center">MEMORY ROASTER</h1>
+        </div>
+        <div class="col-xs-2">
+            <h1 class="text-center side_title">STATS</h1>
+        </div>
+    </div>
+    <div class="row">
+        <!--This is my header container division.  Will have the game logo, game title, reset button, and menu-->
+        <div class="menu_container content side_containers col-xs-2">
+            <button class="start_button left_buttons" onclick="show_game_area()">START</button>
+            <button class="reset_button left_buttons" onclick="reset_game()">RESET</button>
+        </div>
 
-	<!--This will be my main content container.  This container will house the left Nav/info box as well as the game area-->
-	<div class="content_container content">
-		<h1 class="title">MEMORY ROASTER</h1>
-		<div class="game_won"><h1><b>YOU'RE A MASTER ROASTER!!!!!!</b></h1></div>
-		<div class="game_area">
+        <!--This will be my main content container.  This container will house the left Nav/info box as well as the game area-->
+        <div class="content_container content col-xs-8">
 
-			<div class="card_container card_front1">
-    			<img class="front-face card-face" id="card_front1">
-    			<img class="back-face card-face" onclick="card_click('#card_back1','#card_front1')" id="card_back1">
-			</div>
-			<div class="card_container card_front2">
-    			<img class="front-face card-face" id="card_front2">
-    			<img class="back-face card-face" onclick="card_click('#card_back2','#card_front2')" id="card_back2">
-			</div>
-			<div class="card_container card_front3">
-    			<img class="front-face card-face" id="card_front3">
-    			<img class="back-face card-face" onclick="card_click('#card_back3','#card_front3')" id="card_back3">
-			</div>
-		
-			<div class="card_container card_front4">
-    			<img class="front-face card-face" id="card_front4">
-    			<img class="back-face card-face" onclick="card_click('#card_back4','#card_front4')" id="card_back4">
-			</div>
+            <div class="game_won"><h1><b>YOU'RE A MASTER ROASTER!!!!!!</b></h1></div>
+            <div class="game_area">
 
-			<div class="card_container card_front5">
-    			<img class="front-face card-face" id="card_front5">
-    			<img class="back-face card-face" onclick="card_click('#card_back5','#card_front5')" id="card_back5">
-			</div>
-			<div class="card_container card_front6">
-    			<img class="front-face card-face" id="card_front6">
-    			<img class="back-face card-face" onclick="card_click('#card_back6','#card_front6')" id="card_back6">
-			</div>
-			<div class="card_container card_front7">
-    			<img class="front-face card-face" id="card_front7">
-    			<img class="back-face card-face" onclick="card_click('#card_back7','#card_front7')" id="card_back7">
-			</div>
-		
-			<div class="card_container card_front8">
-    			<img class="front-face card-face" id="card_front8">
-    			<img class="back-face card-face" onclick="card_click('#card_back8','#card_front8')" id="card_back8">
-			</div>
+                <div class="card_container card_front1 col-xs-2">
+                    <img class="front-face card-face" id="card_front1">
+                    <img class="back-face card-face" onclick="card_click('#card_back1','#card_front1')" id="card_back1">
+                </div>
+                <div class="card_container card_front2 col-xs-2">
+                    <img class="front-face card-face" id="card_front2">
+                    <img class="back-face card-face" onclick="card_click('#card_back2','#card_front2')" id="card_back2">
+                </div>
+                <div class="card_container card_front3 col-xs-2">
+                    <img class="front-face card-face" id="card_front3">
+                    <img class="back-face card-face" onclick="card_click('#card_back3','#card_front3')" id="card_back3">
+                </div>
 
-			<div class="card_container card_front9">
-    			<img class="front-face card-face" id="card_front9">
-    			<img class="back-face card-face" onclick="card_click('#card_back9','#card_front9')" id="card_back9">
-			</div>
-			<div class="card_container card_front10">
-    			<img class="front-face card-face" id="card_front10">
-    			<img class="back-face card-face" onclick="card_click('#card_back10','#card_front10')" id="card_back10">
-			</div>
-			<div class="card_container card_front11">
-    			<img class="front-face card-face" id="card_front11">
-    			<img class="back-face card-face" onclick="card_click('#card_back11','#card_front11')" id="card_back11">
-			</div>
-		
-			<div class="card_container card_front12">
-    			<img class="front-face card-face" id="card_front12">
-    			<img class="back-face card-face" onclick="card_click('#card_back12','#card_front12')" id="card_back12">
-			</div>
+                <div class="card_container card_front4 col-xs-2">
+                    <img class="front-face card-face" id="card_front4">
+                    <img class="back-face card-face" onclick="card_click('#card_back4','#card_front4')" id="card_back4">
+                </div>
 
-			<div class="card_container card_front13">
-    			<img class="front-face card-face" id="card_front13">
-    			<img class="back-face card-face" onclick="card_click('#card_back13','#card_front13')" id="card_back13">
-			</div>
-			<div class="card_container card_front14">
-    			<img class="front-face card-face" id="card_front14">
-    			<img class="back-face card-face" onclick="card_click('#card_back14','#card_front14')" id="card_back14">
-			</div>
-			<div class="card_container card_front15">
-    			<img class="front-face card-face" id="card_front15">
-    			<img class="back-face card-face" onclick="card_click('#card_back15','#card_front15')" id="card_back15">
-			</div>
-		
-			<div class="card_container card_front16">
-    			<img class="front-face card-face" id="card_front16">
-    			<img class="back-face card-face" onclick="card_click('#card_back16','#card_front16')" id="card_back16">
-			</div>
+                <div class="card_container card_front5 col-xs-2">
+                    <img class="front-face card-face" id="card_front5">
+                    <img class="back-face card-face" onclick="card_click('#card_back5','#card_front5')" id="card_back5">
+                </div>
+                <div class="card_container card_front6 col-xs-2">
+                    <img class="front-face card-face" id="card_front6">
+                    <img class="back-face card-face" onclick="card_click('#card_back6','#card_front6')" id="card_back6">
+                </div>
+                <div class="card_container card_front7 col-xs-2">
+                    <img class="front-face card-face" id="card_front7">
+                    <img class="back-face card-face" onclick="card_click('#card_back7','#card_front7')" id="card_back7">
+                </div>
 
-			<div class="card_container card_front17">
-    			<img class="front-face card-face" id="card_front17">
-    			<img class="back-face card-face" onclick="card_click('#card_back17','#card_front17')" id="card_back17">
-			</div>
-		
-			<div class="card_container card_front18">
-    			<img class="front-face card-face" id="card_front18">
-    			<img class="back-face card-face" onclick="card_click('#card_back18','#card_front18')" id="card_back18">
-			</div>
+                <div class="card_container card_front8 col-xs-2">
+                    <img class="front-face card-face" id="card_front8">
+                    <img class="back-face card-face" onclick="card_click('#card_back8','#card_front8')" id="card_back8">
+                </div>
 
-		</div>
-	
-	</div>
+                <div class="card_container card_front9 col-xs-2">
+                    <img class="front-face card-face" id="card_front9">
+                    <img class="back-face card-face" onclick="card_click('#card_back9','#card_front9')" id="card_back9">
+                </div>
+                <div class="card_container card_front10 col-xs-2">
+                    <img class="front-face card-face" id="card_front10">
+                    <img class="back-face card-face" onclick="card_click('#card_back10','#card_front10')"
+                         id="card_back10">
+                </div>
+                <div class="card_container card_front11 col-xs-2">
+                    <img class="front-face card-face" id="card_front11">
+                    <img class="back-face card-face" onclick="card_click('#card_back11','#card_front11')"
+                         id="card_back11">
+                </div>
 
-	<div class ="stats content side_containers">
-		<h1>STATS</h1>
-		<div class="lcd_display">
-		<p class="roast_profile stats">Roast Profile:</p>
-		<p class="roast_profile_content stats_content">...</p>
-		<p class="bean_temp stats">Bean Temp:</p>
-		<p class="bean_temp_content stats_content">...</p>
-		<p class="accuracy stats">Accuracy:</p>
-		<p class="accuracy_content stats_content">...</p>
-		<p class="multiplier stats">Multiplier:</p>
-		<p class="multiplier_content stats_content">...</p>
-		<p class="score stats">Score:</p>
-		<p class="score_content stats_content">...</p>
-		</div>
-	</div>
+                <div class="card_container card_front12 col-xs-2">
+                    <img class="front-face card-face" id="card_front12">
+                    <img class="back-face card-face" onclick="card_click('#card_back12','#card_front12')"
+                         id="card_back12">
+                </div>
 
-	
+                <div class="card_container card_front13 col-xs-2">
+                    <img class="front-face card-face" id="card_front13">
+                    <img class="back-face card-face" onclick="card_click('#card_back13','#card_front13')"
+                         id="card_back13">
+                </div>
+                <div class="card_container card_front14 col-xs-2">
+                    <img class="front-face card-face" id="card_front14">
+                    <img class="back-face card-face" onclick="card_click('#card_back14','#card_front14')"
+                         id="card_back14">
+                </div>
+                <div class="card_container card_front15 col-xs-2">
+                    <img class="front-face card-face" id="card_front15">
+                    <img class="back-face card-face" onclick="card_click('#card_back15','#card_front15')"
+                         id="card_back15">
+                </div>
+
+                <div class="card_container card_front16 col-xs-2">
+                    <img class="front-face card-face" id="card_front16">
+                    <img class="back-face card-face" onclick="card_click('#card_back16','#card_front16')"
+                         id="card_back16">
+                </div>
+
+                <div class="card_container card_front17 col-xs-2">
+                    <img class="front-face card-face" id="card_front17">
+                    <img class="back-face card-face" onclick="card_click('#card_back17','#card_front17')"
+                         id="card_back17">
+                </div>
+
+                <div class="card_container card_front18 col-xs-2">
+                    <img class="front-face card-face" id="card_front18">
+                    <img class="back-face card-face" onclick="card_click('#card_back18','#card_front18')"
+                         id="card_back18">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="stats content side_containers col-xs-2">
+
+            <div class="lcd_display">
+                <p class="roast_profile stats">Roast Profile:</p>
+
+                <p class="roast_profile_content stats_content">...</p>
+
+                <p class="bean_temp stats">Bean Temp:</p>
+
+                <p class="bean_temp_content stats_content">...</p>
+
+                <p class="accuracy stats">Accuracy:</p>
+
+                <p class="accuracy_content stats_content">...</p>
+
+                <p class="multiplier stats">Multiplier:</p>
+
+                <p class="multiplier_content stats_content">...</p>
+
+                <p class="score stats">Score:</p>
+
+                <p class="score_content stats_content">...</p>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 </body>

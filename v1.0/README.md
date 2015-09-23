@@ -1,9 +1,9 @@
-<h1>Memory Roaster</h1>
+<h1>Calculator</h1>
 
 <h2>Description of Project:</h2>
-This is a Javascript based memory match game made especially for the 
-coffee home roaster who wants to hone in their roast profile 
-prowess or anyone seeking to increase brain power by inhancing attention to detail and memory.
+Javascript based calculator project for use on a desktop or mobile device. 
+Simple and easy to use.  This calculator allows you to do successive complex calculations while
+seeing previous calculations to keep your mathematical thoughts organized.  
 
 <h2>Feature List:</h2>
 - Standard Functions (add, subtract, divide, multiply)
@@ -32,7 +32,7 @@ prowess or anyone seeking to increase brain power by inhancing attention to deta
    ![Alt text](/screenshots/pic1.png "Divid by Zero Case")
    ![Alt text](/screenshots/pic4.png "Complex exponents")
 <h2>Link to Live Preview:</h2>
-<a href="http://jmekstrom.github.io/Memory-Roaster_game" target="_blank">Click here to see a live preview</a>
+<a href="http://jmekstrom.github.io/Calculator" target="_blank">Click here to see a live preview</a>
 
 
 
