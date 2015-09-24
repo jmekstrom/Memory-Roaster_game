@@ -17,6 +17,10 @@ prowess or anyone seeking to increase brain power by inhancing attention to deta
  - Procedural Programming
  - How to make a javascript game
  - Thorough Debugging Practices
+ 
+<h2>Future Version:</h2>
+- Object oriented
+- Score display board and database
 
 <h2>Screenshots of application:</h2>
    ![Alt text](/screenshots/pic1.png "Opening Screen")
