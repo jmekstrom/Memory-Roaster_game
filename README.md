@@ -6,11 +6,16 @@ coffee home roaster who wants to hone in their roast profile
 prowess or anyone seeking to increase brain power by inhancing attention to detail and memory.
 
 <h2>Feature List:</h2>
-
+- Start and Reset Button
+- Randomization of card images
+- Displays roast profile information when a match is found
+- Displays accuracy 
+- Calculates a multiplier based on consecutive matches
+- Speed increases the more you get right
 
 <h2>3 Things I learned:</h2>
- - Complex Array manipulation using Javascript
- - Complex function integration
+ - Procedural Programming
+ - How to make a javascript game
  - Thorough Debugging Practices
 
 <h2>Screenshots of application:</h2>
