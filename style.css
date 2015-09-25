@@ -1,49 +1,13 @@
 
 body{
 	background-repeat: no-repeat;
-	background-position: 50% 0px;
+	background-position: 50% 100px;
 	background-size: 50%;
 	background-color: #000000;
 	color: white;
 	font-family: "coffee_font";
 
 }
-
-
-/*.body_container{*/
-	/*height: auto;*/
-	/*width: 1620px;*/
-	/*margin: 0 auto;*/
-	/*border-top-left-radius: 100px;*/
-	/*border-top-right-radius: 100px;*/
-	/**/
-/*}*/
-/*.content{*/
-	/*display: inline-block;*/
-	/*height: 1000px;*/
-/*}*/
-
-/*.menu_container{*/
-	/*margin: 0;*/
-	/*padding: 0;*/
-	/*border-top-left-radius: 75px;*/
-	/*vertical-align: top;*/
-/*}*/
-
-/*.side_containers{*/
-	/*width: 200px;*/
-	/*height: 1300px;*/
-	/*border: 3px dotted white;*/
-	/*background-color: gray;*/
-/*}*/
-
-/*.content_container{*/
-	/*width: 1200px;*/
-	/*margin: 0;*/
-	/*padding: 0;*/
-	/*text-align: center;*/
-	/*vertical-align: top;*/
-/*}*/
 
 .stats{
 	margin: 0;
