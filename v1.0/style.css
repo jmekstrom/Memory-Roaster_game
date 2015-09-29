@@ -1,55 +1,18 @@
 
 body{
 	background-repeat: no-repeat;
-	background-position: 50% 0px;
-	background-size: 1000px;
+	background-position: 50% 100px;
+	background-size: 50%;
 	background-color: #000000;
 	color: white;
 	font-family: "coffee_font";
 
-
-}
-
-
-.body_container{
-	height: auto;
-	width: 1620px;
-	margin: 0 auto;
-	border-top-left-radius: 100px;
-	border-top-right-radius: 100px;
-	
-}
-.content{
-	display: inline-block;
-	height: 1000px;
-}
-
-.menu_container{
-	margin: 0;
-	padding: 0;
-	border-top-left-radius: 75px;
-	vertical-align: top;
-}
-
-.side_containers{
-	width: 200px;
-	height: 1300px;
-	border: 3px dotted white;
-	background-color: gray;
-}
-
-.content_container{
-	width: 1200px;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	vertical-align: top;
 }
 
 .stats{
 	margin: 0;
 	padding: 0;
-	border-top-right-radius: 75px;
+	border-top-right-radius: 50px;
 	vertical-align: top;
 }
 
@@ -67,54 +30,27 @@ h1{
 }
 
 h1.title{
-	font-size: 100px;
+	font-size: 7vw;
 	margin-top: 0px;
 }
 
-.card_container{
-	height: 175px;
-	width: 150px;
-	display: inline-block;
+.side_title{
+	height: 100%;
+	line-height: 200%;
 }
-
-.card-face{
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-.card_container{
-    position: relative;
-    height: 175px;
-    width: 150px;
-    display: inline-block;
-    border: 5px solid gray;
-	border-radius: 10px;
-	background-color: white;
-	margin: 10px;
-}
-
-.back-face{
-	width: 200px;
-	height: 220px;
-	margin-top: -20px;
-	margin-left: -20px;
-}
-
 
 
 .lcd_display{
-	border: 10px solid #020800;
+	border: 5px solid grey;
 	background-color: #7AF950;
-	height: 250px;
+	height: 100%;
 	width: 80%;
-	margin-left: 5px;
+	margin: 0 auto;
 	color: #020800;
 	padding-left: 10px;
 	padding-top: 20px;
 	font-family: "digital-7";
-	border-top-right-radius: 75px;
+	border-top-right-radius: 50px;
 }
 
 @font-face {
@@ -184,3 +120,36 @@ p.score_content{
 
 }
 
+
+
+.card-face {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.card_container {
+	position: relative;
+	height: 0;
+	padding-bottom: 22%;
+	border: 3px solid transparent;
+	border-radius: 10px;
+}
+
+.back-face {
+	width: 100%;
+	height: 100%;
+
+}
+
+.front-face {
+	padding: 10%;
+}
+
+
+
+html {
+	overflow-y: scroll;
+}
