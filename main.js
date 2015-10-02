@@ -184,8 +184,8 @@ var game_board = function () {
         $("#card_back" + this.pick1.cardNum).hide().parent().css("border-color", "white");
         $("#card_back" + this.pick2.cardNum).hide().parent().css("border-color", "white");
         console.log(game_board);
-        this.cards[this.pick1.cardNum];
-        this.cards[this.pick2.cardNum];
+        this.cards[this.pick1.cardNum] = true;
+        this.cards[this.pick2.cardNum] = true;
         this.good_matches++;
         this.streak++;
         this.update_stats(true);
