@@ -233,6 +233,7 @@ var game_board = new game_board();
 $(document).ready(function () {
     //sets up game board and deals cards randomly
     game_board.dealCards();
+    $(".body_container").css("height",$(window).height())
 })
 
 function game_won() {
