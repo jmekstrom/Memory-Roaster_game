@@ -6,9 +6,7 @@
 }
 
 body{
-	background-repeat: no-repeat;
-	background-position: 50% 100px;
-	background-size: 50%;
+
 	background-color: #000000;
 	color: white;
 	font-family: "coffee_font";
@@ -17,8 +15,13 @@ body{
 }
 
 .body_container{
+	background-image: url("images/roaster.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 100px;
+	background-size: 50%;
+	height: 100%;
 	max-width: 1800px;
-	min-width: 1000px;
+	min-width: 1300px;
 }
 
 .stats{
