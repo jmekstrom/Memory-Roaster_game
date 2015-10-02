@@ -221,43 +221,43 @@ var game_board = function () {
     }
 }
 
-function update_stats_dom(){
-    $("p.roast_profile_content").text(game_board.roast_profile);
-    $("p.bean_temp_content").text(game_board.bean_temp);
-    $("p.accuracy_content").text(game_board.accuracy+ "%");
-    $("p.multiplier_content").text("x" + game_board.multiplier);
-    $("p.score_content").text(game_board.score);
-}
-
 var game_board = new game_board();
 $(document).ready(function () {
     //sets up game board and deals cards randomly
-    game_board.dealCards();
     $(".body_container").css("height",$(window).height())
+    $(".game_message").html("<h1 class='message'>Press Start to Begin!</h1>");
 })
 
 function game_won() {
     setTimeout(function () {
         //console.log('Game Won!!!!');
-        game_board.dealCards();
         $(".game_area").hide();
-        $(".game_won").show();
+        $(".game_message").show().html("<h1 class='message'>You're a Master Roaster!<br>Score:"+game_board.score+"</h1>");
     }, 3000);
 }
 
-function show_game_area() {
-    $(".game_area").show()
-    //console.log("game started")
+function start_game() {
+    game_board.dealCards();
+    $(".game_area").show();
+    $(".game_message").hide();
     $('.start_button').prop('disabled', true);
 
 }
 
 function reset_game() {
     //location.reload();
-    game_board.dealCards();
-    $(".game_won").hide();
-    $(".game_area").show();
+    $(".game_area").hide();
+    $(".game_message").show().html("<h1 class='message'>Press Start to Begin!</h1>");
+    $('.start_button').prop('disabled', false);
 
+}
+
+function update_stats_dom(){
+    $("p.roast_profile_content").text(game_board.roast_profile);
+    $("p.bean_temp_content").text(game_board.bean_temp);
+    $("p.accuracy_content").text(game_board.accuracy+ "%");
+    $("p.multiplier_content").text("x" + game_board.multiplier);
+    $("p.score_content").text(game_board.score);
 }
 
 
